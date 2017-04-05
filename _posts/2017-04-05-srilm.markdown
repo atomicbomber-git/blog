@@ -40,7 +40,7 @@ but I prefer doing it from the terminal:
 
 __Finally__, we've arrived at the last step: the compilation. Before actually 
 compiling SRILM, you should read the INSTALL file inside the srilm directory. It 
-tells you how you should compile the source code. As my system is running on the x86_64 (64 bit), this is the command I issued to compile SRILM:
+tells you how you should compile the source code. Also remember that the command must be executed when you're on the srilm directory where the extracted files reside. As my system is running on the x86_64 (64 bit), this is the command I issued to compile SRILM:
 
 {% highlight bash %}
 	$ make MACHINE_TYPE=i686-m64 SRILM=$(pwd)
