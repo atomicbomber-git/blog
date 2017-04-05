@@ -46,7 +46,7 @@ tells you how you should compile the source code. Also remember that the command
 $ make MACHINE_TYPE=i686-m64 SRILM=$(pwd)
 {% endhighlight %}
 
-Note that may want to adjust the MACHINE_TYPE parameter according to your architecture.
+Note that you may want to adjust the MACHINE_TYPE parameter according to your architecture.
 
 And now you're finished! Programs such as **ngram-count** and the others are available inside the __srilm/bin__ and  __srilm/bin/i686-64__ directories. You can run them the way you run other programs in your distros.
 
