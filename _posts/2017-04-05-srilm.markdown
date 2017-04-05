@@ -26,7 +26,7 @@ but I prefer doing it from the terminal:
 # First, check if your downloaded SRILM source exists in the
 # current directory
 $ ls
-	srilm-1.7.2.tar.gz
+    srilm-1.7.2.tar.gz
 
 # Create a new directory where the extracted files are
 # going to be extracted into, then extract the file using
