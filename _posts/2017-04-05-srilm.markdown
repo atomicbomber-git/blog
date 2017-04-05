@@ -14,7 +14,7 @@ __First__, you have to install programs necessary to compile SRILM such as the G
 Ubuntu based distros, you can do it by issuing this command:
 
 {% highlight bash %}
-	$ sudo apt-get install build-essential
+$ sudo apt-get install build-essential
 {% endhighlight %}
 
 __Next__, download the source code from the [SRILM download page](http://www.speech.sri.com/projects/srilm/download.html "SRILM download"). You have to fill the form on the bottom of the page in order to start the download. The file itself comes in the tar.gz format.
@@ -23,19 +23,19 @@ Then, uncompress and extract it. You can do it through a file manager,
 but I prefer doing it from the terminal:
 
 {% highlight bash %}
-	# First, check if your downloaded SRILM source exists in the
-	# current directory
-	$ ls
-		srilm-1.7.2.tar.gz
+# First, check if your downloaded SRILM source exists in the
+# current directory
+$ ls
+	srilm-1.7.2.tar.gz
 
-	# Create a new directory where the extracted files are
-	# going to be extracted into, then extract the file using
-	# tar
-	$ mkdir srilm
-	$ tar xvf srilm-1.7.2.tar.gz -C srilm
+# Create a new directory where the extracted files are
+# going to be extracted into, then extract the file using
+# tar
+$ mkdir srilm
+$ tar xvf srilm-1.7.2.tar.gz -C srilm
 
-	# Go inside the directory
-	$ cd srilm
+# Go inside the directory
+$ cd srilm
 {% endhighlight %}
 
 __Finally__, we've arrived at the last step: the compilation. Before actually 
@@ -43,7 +43,7 @@ compiling SRILM, you should read the INSTALL file inside the srilm directory. It
 tells you how you should compile the source code. Also remember that the command must be executed when you're on the srilm directory where the extracted files reside. As my system is running on the x86_64 (64 bit), this is the command I would issue to compile SRILM:
 
 {% highlight bash %}
-	$ make MACHINE_TYPE=i686-m64 SRILM=$(pwd)
+$ make MACHINE_TYPE=i686-m64 SRILM=$(pwd)
 {% endhighlight %}
 
 Note that may want to adjust the MACHINE_TYPE parameter according to your architecture.
@@ -51,44 +51,44 @@ Note that may want to adjust the MACHINE_TYPE parameter according to your archit
 And now you're finished! Programs such as **ngram-count** and the others are available inside the __srilm/bin__ and  __srilm/bin/i686-64__ directories. You can run them the way you run other programs in your distros.
 
 {% highlight bash %}
-	$ ls -r bin
-		bin:
-		align-with-tags       i686-m64             pfsg-from-ngram
-		change-lm-vocab       make-batch-counts    rescore-acoustic
-		compare-sclite        make-big-lm          rescore-decipher
-		compute-sclite        make-multiword-pfsg  rescore-minimize-wer
-		compute-sclite-nbest  merge-batch-counts   rescore-reweight
-		cumbin                nbest-error          rexport.gnumake
-		empty-sentence-lm     nbest-rover          search-rover-combo
+$ ls -r bin
+    bin:
+    align-with-tags       i686-m64             pfsg-from-ngram
+    change-lm-vocab       make-batch-counts    rescore-acoustic
+    compare-sclite        make-big-lm          rescore-decipher
+    compute-sclite        make-multiword-pfsg  rescore-minimize-wer
+    compute-sclite-nbest  merge-batch-counts   rescore-reweight
+    cumbin                nbest-error          rexport.gnumake
+    empty-sentence-lm     nbest-rover          search-rover-combo
 
-		bin/i686-m64:
-		add-classes-to-pfsg        htklat-vocab        ngram-merge
-		add-dummy-bows             lattice-tool        pfsg-to-dot
-		add-pauses-to-pfsg         log10-to-bytelog    pfsg-to-fsm
-		add-ppls                   make-abs-discount   pfsg-vocab
-		anti-ngram                 make-diacritic-map  ppl-from-log
-		bytelog-to-log10           make-google-ngrams  prettify
-		classes-to-fsm             make-gt-discounts   remove-lowprob-ngrams
-		combine-acoustic-scores    make-hiddens-lm     replace-unk-words
-		combine-rover-controls     make-kn-counts      replace-words-with-classes
-		compare-ppls               make-kn-discounts   reverse-lm
-		compute-best-mix           make-lm-subset      reverse-ngram-counts
-		compute-best-rover-mix     make-nbest-pfsg     reverse-text
-		compute-best-sentence-mix  make-ngram-pfsg     segment
-		compute-oov-rate           make-sub-lm         segment-nbest
-		context-ngrams             maxalloc            select-vocab
-		continuous-ngram-count     merge-nbest         sentid-to-ctm
-		de-vq-lm                   metadb              sentid-to-sclite
-		disambig                   multi-ngram         sort-lm
-		extract-skip-probs         nbest2-to-nbest1    split-tagged-ngrams
-		filter-event-counts        nbest-lattice       subset-context-ngrams
-		find-reference-posteriors  nbest-mix           subtract-ppls
-		fix-ctm                    nbest-optimize      tolower-ngram-counts
-		fngram                     nbest-posteriors    uniform-classes
-		fngram-count               nbest-pron-score    uniq-ngram-counts
-		fsm-to-pfsg                nbest-vocab         vp2text
-		get-gt-counts              nbest-words         wlat-stats
-		get-unigram-probs          ngram               wlat-to-dot
-		hidden-ngram               ngram-class         wlat-to-pfsg
-		hits-from-log              ngram-count         wordlat-to-lisp
+    bin/i686-m64:
+    add-classes-to-pfsg        htklat-vocab        ngram-merge
+    add-dummy-bows             lattice-tool        pfsg-to-dot
+    add-pauses-to-pfsg         log10-to-bytelog    pfsg-to-fsm
+    add-ppls                   make-abs-discount   pfsg-vocab
+    anti-ngram                 make-diacritic-map  ppl-from-log
+    bytelog-to-log10           make-google-ngrams  prettify
+    classes-to-fsm             make-gt-discounts   remove-lowprob-ngrams
+    combine-acoustic-scores    make-hiddens-lm     replace-unk-words
+    combine-rover-controls     make-kn-counts      replace-words-with-classes
+    compare-ppls               make-kn-discounts   reverse-lm
+    compute-best-mix           make-lm-subset      reverse-ngram-counts
+    compute-best-rover-mix     make-nbest-pfsg     reverse-text
+    compute-best-sentence-mix  make-ngram-pfsg     segment
+    compute-oov-rate           make-sub-lm         segment-nbest
+    context-ngrams             maxalloc            select-vocab
+    continuous-ngram-count     merge-nbest         sentid-to-ctm
+    de-vq-lm                   metadb              sentid-to-sclite
+    disambig                   multi-ngram         sort-lm
+    extract-skip-probs         nbest2-to-nbest1    split-tagged-ngrams
+    filter-event-counts        nbest-lattice       subset-context-ngrams
+    find-reference-posteriors  nbest-mix           subtract-ppls
+    fix-ctm                    nbest-optimize      tolower-ngram-counts
+    fngram                     nbest-posteriors    uniform-classes
+    fngram-count               nbest-pron-score    uniq-ngram-counts
+    fsm-to-pfsg                nbest-vocab         vp2text
+    get-gt-counts              nbest-words         wlat-stats
+    get-unigram-probs          ngram               wlat-to-dot
+    hidden-ngram               ngram-class         wlat-to-pfsg
+    hits-from-log              ngram-count         wordlat-to-lisp
 {% endhighlight %}
